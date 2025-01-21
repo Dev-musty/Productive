@@ -1,0 +1,217 @@
+:root{
+  --Background: #060126;
+  --Text: white;
+  --card-bg: #1D0259;
+  --trasparent-bg: #1e025961;
+  --border:#150140;
+  --gradient: linear-gradient(90deg, rgba(112,37,217,1) 0%, rgba(255,255,255,1) 47%, rgba(75,10,166,1) 100%);;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 62.5%;
+}
+body{
+  background-color: var(--Background);
+  
+}
+h2{
+  color: var(--Text);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 425px;
+  margin: 15rem auto 0;
+  font-family: "Red Hat Text", serif;
+}
+main>div:first-child{
+  background-color: var(--trasparent-bg);
+  border-radius: 10px 10px 0 0;
+  color: var(--Text);
+  width: 90%;
+}
+#head{
+  background: var(--gradient);
+  width: 100%;
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+}
+#title{
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+#day{
+  text-align: center;
+  line-height: 1;
+  border-radius: 10px;
+  padding: 0.7rem;
+}
+#day p:first-child{
+  font-size: 3rem;
+}
+#day p:last-child{
+  font-size: 0.8rem;
+}
+
+.task-amount{
+  font-size: 2rem;
+  margin: 1rem 0 0;
+}
+#task{
+  width: 100%;
+  padding: 1rem;
+}
+.text{
+  cursor: pointer;
+  margin: 1rem 0;
+  height: 20px;
+  width: 90%;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 1px solid var(--Text);
+  background: none;
+  font-size: 1.5rem;
+  color: var(--Text);
+  margin-bottom: 3rem;
+}
+.date{
+  cursor: pointer;
+  margin: 1rem 0 1.5rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  border: none;
+  background-color: blueviolet;
+  color: white;
+}
+.add-task{
+  cursor: pointer;
+  display: block;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  border: none;
+  background-color: blueviolet;
+  color: white;
+  margin-bottom: 1rem;
+
+}
+
+.task-list{
+  background-color: white;
+  margin: 1rem 0 0;
+  padding: 0.4rem;
+  font-size: 2rem;
+  width: 90%;
+}
+
+.tasks{
+  margin: 1rem 0 0;
+}
+.todo{
+  display: flex;
+  align-items: center;
+  padding:0.5rem 1rem 0;
+}
+
+.item-date{
+  margin:0.5rem 0 0.5rem 2.9rem;
+  background-color: var(--Background);
+  color: var(--Text);
+  font-size: 1.2rem;
+  width: 40%;
+  padding: 0.5rem;
+  border-radius: 20px;
+  text-align: center;
+}
+#remove {
+  cursor: pointer;
+  font-size: 2rem;
+  width: 20px;
+  height: 20px;
+  background: none;
+  border: none;
+
+}
+.item{
+  width: 450px;
+  padding:0 1rem 0 ;
+  word-break: break-all;
+  font-weight: 500;
+  font-size: 2.5rem;
+
+}
+.done-task{
+  text-decoration: line-through;
+
+}
+.clear{
+  display: none;
+}
+.clear-list{
+  display: block;
+  margin: 1rem auto 0;
+  padding: 1rem;
+  background-color: var(--Background);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-size: 1.5rem;
+  visibility: visible;
+}
+.clear-list:hover{
+  cursor: pointer;
+}
+
+
+@media(min-width: 627px){
+  .date{
+    font-size: 2.5rem;
+  }
+  .item-date{
+    font-size: 1.6rem;
+  }
+  .add-task{
+    font-size: 2.5rem;
+  }
+  .task-amount{
+    font-size: 2.9rem;
+  }
+  #day p:first-child{
+    font-size: 5rem;
+  }
+  #day p:last-child{
+    font-size: 1.5rem;
+  }
+  main{
+    max-width: 600px;
+  }
+  .task-list{
+    margin-top: 3rem;
+  }
+}
+@media(min-width:1024px){
+  main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    gap: 12rem;
+  }
+  main>div:first-child{
+    width: 120%;
+  }
+  .task-list{
+    width:90%;
+  }
+}

@@ -1,0 +1,140 @@
+:root{
+  --Background: #060126;
+  --Text: white;
+  --card-bg: #1D0259;
+  --trasparent-bg: #1e025961;
+  --border:#150140;
+  --gradient: linear-gradient(90deg, rgba(112,37,217,1) 0%, rgba(255,255,255,1) 47%, rgba(75,10,166,1) 100%);;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: var(--Background);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container{
+  max-width: 425px;
+  margin: 15rem auto 0;
+}
+html{
+  font-size: 62.5%;
+}
+.header{
+  background-color: var(--trasparent-bg);
+  color: var(--Text);
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 2rem 1rem;
+  border-bottom-right-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+h1 img{
+  width: 12%;
+  filter:brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7490%) hue-rotate(84deg) brightness(99%) contrast(107%)
+  
+}
+button{
+  cursor: pointer;
+}
+.moves{
+  display: grid;
+  grid-template-areas: 
+    "box1 box1 box2 box2"
+    ".    box3 box3    ."
+  ;
+}
+.rock{
+  grid-area: box1;
+}
+.paper{
+  grid-area: box2;
+}
+.scissors{
+  grid-area: box3;
+}
+.move{
+  height: 200px;
+  width: 200px;
+  background-color: transparent;
+  border: 5px solid var(--Text);
+  border-radius: 50%;
+  margin: 1rem auto;
+  padding: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.move img{
+  width: 200%;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7490%) hue-rotate(84deg) brightness(99%) contrast(107%)
+
+}
+.result{
+  background-color: var(--card-bg);
+  text-align: center;
+  margin: 1rem auto;
+  width: 80%;
+}
+.result >button{
+  padding: 1rem 3rem;
+  border: none;
+  background-color: transparent;
+  color: var(--Text);
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+.same{
+  margin: auto;
+  width: 80%;
+  color: white;
+  line-height: 2;
+  font-size: 2rem;
+}
+.choice-img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.choice-img img{
+  width: 20%;
+  margin: 0 0.5rem ;
+  filter: brightness(0) saturate(100%) invert(16%) sepia(24%) saturate(3121%) hue-rotate(186deg) brightness(93%) contrast(107%);
+}
+
+@media(min-width: 320px){
+  .container{
+    max-width: 325px;
+
+  }
+  .move{
+    height: 100px;
+    width: 100px;
+    padding: 1rem;
+  }
+  .move img{
+    width: 100%;
+  }
+}
+
+@media(min-width: 625px){
+  .container{
+    max-width: 700px;
+
+  }
+  .move{
+    height: 200px;
+    width: 200px;
+    padding: 1rem;
+  }
+  .move img{
+    width: 100%;
+  }
+}

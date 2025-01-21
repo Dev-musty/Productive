@@ -1,0 +1,93 @@
+:root{
+  --Background: #060126;
+  --Text: white;
+  --trasparent-bg: #1e025961;
+  --border:#150140;
+  --gradient: linear-gradient(90deg, rgba(112,37,217,1) 0%, rgba(255,255,255,1) 47%, rgba(75,10,166,1) 100%);;
+  
+}
+
+.logo{
+  font-family: "Open Sans", serif;
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3rem;
+}
+
+nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0 0.5rem;
+  border-bottom: 2px solid var(--border);
+  width: 90%;
+  margin:0 auto 2.5rem;
+  
+}
+.menu-icon i{
+  font-size: 2.5rem;
+  color: var(--Text);
+}
+nav > span i:hover{
+  cursor: pointer;
+}
+.menu{
+  display: none;
+}
+/* sidebar*/
+.side-bar{
+  position: fixed;
+  top: 10%;
+  right: 5%;
+  display: none;
+  flex-direction: column;
+}
+.disp{
+  display: flex;
+  background-color: var(--trasparent-bg);
+  backdrop-filter: blur(10px);
+  padding: 1rem 3rem 1rem 1rem;
+}
+.disp li{
+  list-style: none;
+  line-height: 2;
+}
+.disp a{
+  text-decoration: none;
+  color: var(--Text);
+  font-family: "Red Hat Text", serif;
+  font-size: 2rem;
+}
+.disp a:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+.fa-xmark:hover{
+  cursor: pointer;
+}
+
+
+@media(min-width:625px ){
+  .menu-icon{
+    display: none;
+  }
+  .menu{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  .menu li{
+    list-style: none;
+  }
+  .menu a{
+    text-decoration: none;
+    color: var(--Text);
+    font-size: 1.6rem;
+    font-family: "Red Hat Text", serif;
+  }
+}

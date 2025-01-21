@@ -1,0 +1,178 @@
+:root{
+  --Background: #060126;
+  --Text: white;
+  --card-bg: #1D0259;
+  --trasparent-bg: #1e025961;
+  --border:#150140;
+  --gradient: linear-gradient(90deg, rgba(112,37,217,1) 0%, rgba(255,255,255,1) 47%, rgba(75,10,166,1) 100%);;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+html{
+  font-size: 62.5%; 
+}
+body{
+  background-color: var(--Background);
+  color: var(--Text);
+}
+body > div{
+  max-width: 425px;
+  margin: auto;
+}
+
+
+/* contents*/
+h2{
+  font-size: 2rem;
+  font-family: "Red Hat Text", serif;
+  margin-bottom:1rem ;
+}
+.animate{
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 15em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
+
+/* about */
+.about{
+  margin: 10rem auto 0;
+  width: 90%;
+}
+.about > div{
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  font-family: "Red Hat Text", serif;
+  font-size: 1.5rem;
+}
+.about i{
+  font-size: 2rem;
+  margin: 1rem 0.5rem 5rem 0;
+  color: var(--Text);
+}
+
+
+button{
+  margin: 1rem 0;
+  width: 20%;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--Background);
+  color: var(--Text);
+}
+
+/* features */
+#features{
+  width: 90%;
+  margin: auto;
+}
+.features > h2{
+  margin-bottom: 2rem;
+}
+.feature-container{
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  font-family: "Red Hat Text", serif;
+  font-size: 1.7rem;
+}
+span{
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.feedback{
+  margin: 7rem auto 4rem;
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+}
+.feedback >h2{
+  text-align: center;
+  margin-bottom: 4rem;
+}
+form{
+  display: flex;
+  flex-direction: column;
+}
+input{
+  width: 60%;
+  margin: 0 0 0.5rem;
+  padding: 0.5rem;
+
+}
+label{
+  margin: 0 0 0.5rem;
+  font-size: 2rem;
+  font-family: "Red Hat Text", serif;
+}
+.text-area{
+  width: 60%;
+  height: 10rem;
+  margin-top: 3rem;
+}
+
+
+@media(min-width: 627px){
+  body > div{
+    max-width: 768px;
+  }
+  h2{
+    font-size: 3rem;
+  }
+  span{
+    font-size: 1.7rem;
+  }
+  .features{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .feature-container{
+    margin: 0;
+  }
+  .definition{
+    width: 50%;
+    font-size: 2rem;
+  }
+}
+
+@media(min-width: 1024px){
+  body > div{
+    max-width: 1024px;
+  }
+  span{
+    font-size: 1.9rem;
+  }
+}
+@media(min-width: 1440px){
+  body > div{
+    max-width: 1300px;
+  }
+  .definition{
+    font-size: 2.7rem;
+  }
+  span{
+    font-size: 2.5rem;
+  }
+  h3{
+    font-size: 3rem;
+  }
+  button{
+    padding: 1rem;
+    font-size: 3rem;
+  }
+}
